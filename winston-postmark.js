@@ -29,7 +29,7 @@
         'From': this.postmarkFrom,
         'To': this.postmarkTo,
         'Subject': this.postmarkSubject,
-        'HtmlBody': "<code>" + (JSON.stringify(msg, void 0, 4)) + "</code><br/><br/><br/><code>" + (JSON.stringify(meta, void 0, 4)) + "</code>",
+        'HtmlBody': "<pre>" + (JSON.stringify(msg, void 0, 4)) + "</pre><br/><br/><br/><pre>" + (JSON.stringify(meta, void 0, 4)) + "</pre>",
         'TextBody': "" + (JSON.stringify(msg, void 0, 4)) + "\n\n\n" + (JSON.stringify(meta, void 0, 4))
       });
       return callback(null, true);

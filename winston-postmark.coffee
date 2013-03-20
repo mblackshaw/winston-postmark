@@ -21,6 +21,6 @@ exports.Postmark = winston.transports.Postmark = class Postmark extends winston.
       'From': @postmarkFrom,
       'To': @postmarkTo,
       'Subject': @postmarkSubject,
-      'HtmlBody': "<code>#{JSON.stringify(msg,undefined,4)}</code><br/><br/><br/><code>#{JSON.stringify(meta,undefined,4)}</code>",
+      'HtmlBody': "<pre>#{JSON.stringify(msg,undefined,4)}</pre><br/><br/><br/><pre>#{JSON.stringify(meta,undefined,4)}</pre>",
       'TextBody': "#{JSON.stringify(msg,undefined,4)}\n\n\n#{JSON.stringify(meta,undefined,4)}"
     callback null, true
